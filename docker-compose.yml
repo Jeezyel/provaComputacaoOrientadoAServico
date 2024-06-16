@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  provacomputacaoorientadaaservico:
+    image: ${DOCKER_REGISTRY-}provacomputacaoorientadaaservico
+    build:
+      context: .
+      dockerfile: provaComputacaoOrientadaAServico/Dockerfile
+    

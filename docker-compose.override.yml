@@ -1,0 +1,18 @@
+version: '3.4'
+
+services:
+  provacomputacaoorientadaaservico:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "8081:8080"
+
+  postgres:
+    image: postgres    
+    container_name: bdpostgres
+    environment:
+      POSTGRES_PASSWORD: "Postgres2024"
+    ports:
+      - "5499:5432"
+      
