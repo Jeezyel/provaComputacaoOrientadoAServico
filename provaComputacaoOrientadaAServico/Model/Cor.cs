@@ -6,8 +6,9 @@
         public string nome { get; set; }
         public string codego { get; set; }
 
-        public Cor(string nome, string codego)
+        public Cor(int id , string nome, string codego)
         {
+            this.Id = id ;
             this.nome = nome;
             this.codego = codego;
         }

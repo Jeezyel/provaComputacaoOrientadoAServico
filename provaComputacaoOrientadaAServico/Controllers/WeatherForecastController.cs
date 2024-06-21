@@ -38,17 +38,7 @@ namespace provaComputacaoOrientadaAServico.Controllers
             return Ok(cores);
         }
 
-        // POST: api/YourEntities
-        [HttpPost("PostCor")]
-        public async Task<ActionResult<Cor>> PostCor(Cor Cor = null)
-        {
-            return Ok(corRepository.Add(Cor));
-        }
-
-
-       
-
-        [HttpGet("{id}")]
+        [HttpGet("GetById{id}")]
         public ActionResult<Cor> GetById(int id)
         {
             var cor = corRepository.GetById(id);
@@ -79,7 +69,7 @@ namespace provaComputacaoOrientadaAServico.Controllers
             return Ok(result);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeletById{id}")]
         public IActionResult Delete(int id)
         {
             var cor = corRepository.GetById(id);
@@ -97,7 +87,7 @@ namespace provaComputacaoOrientadaAServico.Controllers
             return NoContent();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("Update{id}")]
         public IActionResult Update(int id, [FromBody] Cor cor = null)
         {
             if (cor == null || cor.Id != id )
